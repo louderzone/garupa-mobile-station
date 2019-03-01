@@ -13,5 +13,9 @@ namespace GarupaPico
         {
             InitializeComponent();
         }
+        void OnLaunchCalTool(object sender, EventArgs args)
+        {
+
+        }
     }
 }

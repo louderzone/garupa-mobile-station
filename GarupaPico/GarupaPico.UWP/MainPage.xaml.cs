@@ -23,5 +23,6 @@ namespace GarupaPico.UWP
 
             LoadApplication(new GarupaPico.App());
         }
+        
     }
 }

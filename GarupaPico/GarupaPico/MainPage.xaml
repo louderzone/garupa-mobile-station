@@ -6,9 +6,22 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <!-- Title -->
+        <Label Text="バンドリ！ガールズバンドパーティ！" 
+           HorizontalOptions="Center" />
+        <Label Text="モバイルステーシヨン" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="StartAndExpand" />
+        
+        <!-- Select Tool here, have more than one -->
+        <Button Text="ガルパ - バンド総合力ツール"
+                HorizontalOptions="Center"
+                Clicked="OnLaunchCalTool" />
+        <Button Text="ガルパ - イベントトップ情報"
+                HorizontalOptions="Center"
+                Clicked="OnLaunchCalTool" />
+        <!-- Clicked Deck & Song Score Tool -->
+
     </StackLayout>
 
 </ContentPage>
