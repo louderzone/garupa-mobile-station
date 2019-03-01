@@ -5,10 +5,39 @@
              x:Class="GarupaPico.MainPage">
 
     <StackLayout>
+
+        <!--StackLayout.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Image">
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS, Android" Value="MonkeyFace.png" />
+                        <On Platform="UWP" Value="Assets/MonkeyFace.png" />
+                    </OnPlatform>
+                </Setter>
+            </Style>
+        </StackLayout.Resources-->
+        
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
+        <!-- Title -->
+        <Label Text="バンドリ！ガールズバンドパーティ！" 
+           HorizontalOptions="Center" />
+        <Label Text="モバイルステーシヨン" 
            HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+           VerticalOptions="StartAndExpand" />
+        
+        <!-- Select Tool here, have more than one -->
+        <Button Text="ガルパ - バンド総合力ツール"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnLaunchCalTool"
+                Image="calculator-graphic.png"
+                ContentLayout="Top, 15" />
+        
+        <Button Text="ガルパ - イベントトップ情報"
+                HorizontalOptions="Center"
+                Clicked="OnLaunchCalTool" />
+        <!-- Clicked Deck & Song Score Tool -->
+
     </StackLayout>
 
 </ContentPage>

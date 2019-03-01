@@ -157,4 +157,7 @@
       <Name>GarupaPico</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="calculator-graphic.png" />
+  </ItemGroup>
 </Project>
