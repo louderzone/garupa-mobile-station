@@ -6,36 +6,31 @@
 
     <StackLayout>
 
-        <!--StackLayout.Resources>
-            <Style TargetType="Button">
-                <Setter Property="Image">
-                    <OnPlatform x:TypeArguments="FileImageSource">
-                        <On Platform="iOS, Android" Value="MonkeyFace.png" />
-                        <On Platform="UWP" Value="Assets/MonkeyFace.png" />
-                    </OnPlatform>
-                </Setter>
-            </Style>
-        </StackLayout.Resources-->
-        
         <!-- Place new controls here -->
         <!-- Title -->
-        <Label Text="バンドリ！ガールズバンドパーティ！" 
-           HorizontalOptions="Center" />
-        <Label Text="モバイルステーシヨン" 
-           HorizontalOptions="Center"
-           VerticalOptions="StartAndExpand" />
+        <Label Text="バンドリ！ガールズバンドパーティ！"
+               HorizontalOptions="Center" />
+        <Label Text="モバイルステーシヨン"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand" />
         
         <!-- Select Tool here, have more than one -->
         <Button Text="ガルパ - バンド総合力ツール"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
-                Clicked="OnLaunchCalTool"
-                Image="calculator-graphic.png"
-                ContentLayout="Top, 15" />
+                Clicked="LaunchCalTool_OnClicked"
+                ContentLayout="Top, 15" >
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="iOS, Android">calculator_icon.png</On>
+                    <On Platform="UWP">Assets/calculator_icon.png</On>
+                </OnPlatform>
+            </Button.Image>
+        </Button>
         
         <Button Text="ガルパ - イベントトップ情報"
                 HorizontalOptions="Center"
-                Clicked="OnLaunchCalTool" />
+                Clicked="LaunchCalTool_OnClicked" />
         <!-- Clicked Deck & Song Score Tool -->
 
     </StackLayout>
