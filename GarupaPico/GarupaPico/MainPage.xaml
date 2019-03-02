@@ -30,7 +30,7 @@
         
         <Button Text="ガルパ - イベントトップ情報"
                 HorizontalOptions="Center"
-                Clicked="OnLaunchCalTool" />
+                Clicked="LaunchCalTool_OnClicked" />
         <!-- Clicked Deck & Song Score Tool -->
 
     </StackLayout>
