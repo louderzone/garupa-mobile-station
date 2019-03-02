@@ -8,11 +8,11 @@
 
         <!-- Place new controls here -->
         <!-- Title -->
-        <Label Text="バンドリ！ガールズバンドパーティ！" 
-           HorizontalOptions="Center" />
-        <Label Text="モバイルステーシヨン" 
-           HorizontalOptions="Center"
-           VerticalOptions="StartAndExpand" />
+        <Label Text="バンドリ！ガールズバンドパーティ！"
+               HorizontalOptions="Center" />
+        <Label Text="モバイルステーシヨン"
+               HorizontalOptions="Center"
+               VerticalOptions="StartAndExpand" />
         
         <!-- Select Tool here, have more than one -->
         <Button Text="ガルパ - バンド総合力ツール"
