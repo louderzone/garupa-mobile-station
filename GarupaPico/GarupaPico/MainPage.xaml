@@ -6,17 +6,6 @@
 
     <StackLayout>
 
-        <!--StackLayout.Resources>
-            <Style TargetType="Button">
-                <Setter Property="Image">
-                    <OnPlatform x:TypeArguments="FileImageSource">
-                        <On Platform="iOS, Android" Value="MonkeyFace.png" />
-                        <On Platform="UWP" Value="Assets/MonkeyFace.png" />
-                    </OnPlatform>
-                </Setter>
-            </Style>
-        </StackLayout.Resources-->
-        
         <!-- Place new controls here -->
         <!-- Title -->
         <Label Text="バンドリ！ガールズバンドパーティ！" 
