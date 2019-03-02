@@ -13,5 +13,10 @@ namespace GarupaPico
         {
             InitializeComponent();
         }
+
+        private void LaunchCalTool_OnClicked(object sender, EventArgs args)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
