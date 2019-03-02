@@ -1,47 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GarupaPico"
-             x:Class="GarupaPico.MainPage">
+             x:Class="GarupaPico.MainPage" >
+    <!--NavigationPage Title="Cal Tool">
+        <x:Arguments>
+            <local:TabbedCalPage />
+        </x:Arguments>
+    </NavigationPage-->
 
-    <StackLayout Padding="20,20">
+    <ContentPage>
+        <StackLayout Padding="20,20">
 
-        <!-- Place new controls here -->
-        <!-- Title -->
-        <Label Text="バンドリ！ガールズバンドパーティ！"
-               HorizontalOptions="Center"
-               Style="{DynamicResource TitleStyle}"
-               FontSize="20" />
+            <!-- Place new controls here -->
+            <!-- Title -->
+            <Label Text="バンドリ！ガールズバンドパーティ！"
+                   HorizontalOptions="Center"
+                   Style="{DynamicResource TitleStyle}"
+                   FontSize="20" />
 
-        <Label Text="モバイルステーション"
-               HorizontalOptions="Center"
-               VerticalOptions="StartAndExpand"
-               Style="{DynamicResource SubitleStyle}"
-               FontSize="20" />
+            <Label Text="モバイルステーション"
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   Style="{DynamicResource SubitleStyle}"
+                   FontSize="20" />
         
-        <!-- Select Tool here, have more than one -->
-        <Button Text="バンド総合力ツール"
-                HorizontalOptions="CenterAndExpand"
-                VerticalOptions="Center"
-                Clicked="LaunchCalTool_OnClicked"
-                ContentLayout="Top, 20"
-                Padding="70, 20"
-                FontSize="22" >
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="iOS, Android">calculator_icon.png</On>
-                    <On Platform="UWP">Assets/calculator_icon.png</On>
-                </OnPlatform>
-            </Button.Image>
-        </Button>
+            <!-- Select Tool here, have more than one -->
+            <Button Text="バンド総合力ツール"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    Clicked="LaunchCalTool_OnClicked"
+                    ContentLayout="Top, 20"
+                    Padding="70, 20"
+                    FontSize="22" >
+                <Button.Image>
+                    <OnPlatform x:TypeArguments="FileImageSource">
+                        <On Platform="iOS, Android">calculator_icon.png</On>
+                        <On Platform="UWP">Assets/calculator_icon.png</On>
+                    </OnPlatform>
+                </Button.Image>
+            </Button>
         
-        <Button Text="イベントトップ情報"
-                HorizontalOptions="CenterAndExpand"
-                Clicked="LaunchCalTool_OnClicked"
-                Padding="70, 20"
-                FontSize="22" />
-        <!-- Clicked Deck & Song Score Tool -->
+            <Button Text="イベントトップ情報"
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="LaunchCalTool_OnClicked"
+                    Padding="70, 20"
+                    FontSize="22" />
+            <!-- Clicked Deck & Song Score Tool -->
 
-    </StackLayout>
-
-</ContentPage>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>
