@@ -13,13 +13,17 @@ namespace GarupaPico
         {
             var mainPage = this;
             mainPage.Title = "MAIN";
-            // mainPage.Icon = "main.png";
-            var calPage = new NavigationPage(new TabbedCalPage());
-            // calPage.Icon = "cal.png";
-            calPage.Title = "CAL TOOL";
-            var eventTopPage = new NavigationPage(new TabbedEventTopPage());
-            eventTopPage.Title = "EVENT TOP INFO";
-            // eventTopPage.Icon = "eventtop.png";
+            mainPage.Icon = "main.png";
+            var calPage = new NavigationPage(new TabbedCalPage())
+            {
+                Title = "CAL TOOL",
+                // Icon = "cal.png"
+            };
+            var eventTopPage = new NavigationPage(new TabbedEventTopPage())
+            {
+                Title = "EVENT TOP INFO",
+                // Icon = "eventtop.png"
+            };
             Children.Add(calPage);
             Children.Add(eventTopPage);
 
