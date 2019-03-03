@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GarupaPico.View;
 using Xamarin.Forms;
 
 namespace GarupaPico
@@ -14,12 +15,12 @@ namespace GarupaPico
             var mainPage = this;
             mainPage.Title = "MAIN";
             mainPage.Icon = "main.png";
-            var calPage = new NavigationPage(new TabbedCalPage())
+            var calPage = new NavigationPage(new View.CalculatorPage())
             {
                 Title = "CAL TOOL",
                 // Icon = "cal.png"
             };
-            var eventTopPage = new NavigationPage(new TabbedEventTopPage())
+            var eventTopPage = new NavigationPage(new View.EventTopPage())
             {
                 Title = "EVENT TOP INFO",
                 // Icon = "eventtop.png"

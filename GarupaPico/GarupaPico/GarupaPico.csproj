@@ -14,10 +14,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="TabbedCalPage.xaml">
+    <Compile Update="View\CalculatorPage.xaml.cs">
+      <DependentUpon>CalculatorPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\EventTopPage.xaml.cs">
+      <DependentUpon>EventTopPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\CalculatorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="TabbedEventTopPage.xaml">
+    <EmbeddedResource Update="View\EventTopPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
