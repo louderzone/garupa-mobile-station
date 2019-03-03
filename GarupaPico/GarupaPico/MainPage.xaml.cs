@@ -12,22 +12,6 @@ namespace GarupaPico
     {
         public MainPage()
         {
-            var mainPage = this;
-            mainPage.Title = "MAIN";
-            mainPage.Icon = "main.png";
-            var calPage = new NavigationPage(new View.CalculatorPage())
-            {
-                Title = "CAL TOOL",
-                // Icon = "cal.png"
-            };
-            var eventTopPage = new NavigationPage(new View.EventTopPage())
-            {
-                Title = "EVENT TOP INFO",
-                // Icon = "eventtop.png"
-            };
-            Children.Add(calPage);
-            Children.Add(eventTopPage);
-
             InitializeComponent();
         }
 

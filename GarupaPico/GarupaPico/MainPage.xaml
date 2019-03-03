@@ -2,9 +2,11 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GarupaPico"
+             xmlns:view="clr-namespace:GarupaPico.View;assembly=GarupaPico"
              x:Class="GarupaPico.MainPage" >
-    <ContentPage>
-        <StackLayout Padding="10">
+    <ContentPage Title="Main">
+        <StackLayout BackgroundColor="{StaticResource DefaultBackgroundColor}"
+                     Padding="10">
 
             <!-- Place new controls here -->
             <!-- Title -->
@@ -44,4 +46,6 @@
 
         </StackLayout>
     </ContentPage>
+    <view:CalculatorPage Title="Deck Calculator"></view:CalculatorPage>
+    <view:EventTopPage Title="Event Top Info"></view:EventTopPage>
 </TabbedPage>
