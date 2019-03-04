@@ -4,16 +4,19 @@ using System.Text;
 
 namespace GarupaPico.Model
 {
-    class Card {
+    class Card
+    {
+        private string _imgPath;
+
         /// <summary>
         /// Gets card id from the game.
         /// </summary>
-        public int Id { get; private set; }
+        public int Id { get; private set; } = -1;
 
         /// <summary>
         /// Gets card title.
         /// </summary>
-        public string CardName { get; private set; }
+        public string CardName { get; private set; } = "<なし>";
 
         /// <summary>
         /// Gets card character band.
@@ -73,52 +76,24 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets skill last at minimum skill level.
         /// </summary>
-        public float SkillLastS { get; private set; }
+        public float SkillLastMin { get; private set; }
 
         /// <summary>
         /// Gets skill last at maximum skill level.
         /// </summary>
-        public float SkillLastL { get; private set; }
+        public float SkillLastMax { get; private set; }
 
         /// <summary>
         /// Gets online image path.
         /// </summary>
-        public string ImgPath { get; private set; }
-        
-        // default dummy constructor
-        public Card() {
-            Id = -1;
-            CardName = "<なし>";
-            Band = "N/A";
-            Rarity = 0;
-            Type = "N/A";
-            Pow = 0;
-            Tech = 0;
-            Vis = 0;
-            //ImgPath = "" + this.getResource("/cardIcons/card0.png");
-            this.SkillType = "N/A";
-            ScorePercent = 0;
-            SkillLastS = 0.0f;
-            SkillLastL = 0.0f;
+        public string ImgPath
+        {
+            get => _imgPath;
+            private set => _imgPath = "https://i.imgur.com/" + value;
         }
-
-        // full data contrustor
-        public Card(int Id, string CardName, string Band, MemberName characterName, 
-            int Rarity, string Type, int Pow, int Tech, int Vis, string SkillType, int scorePercent, float SkillLastL, string ImgPath) {
-            this.Id = Id;
-            this.CardName = CardName;
-            this.Band = Band;
-            this.CharacterName = characterName;
-            this.Rarity = Rarity;
-            this.Type = Type;
-            this.Pow = Pow;
-            this.Tech = Tech;
-            this.Vis = Vis;
-            this.SkillType = SkillType;
-            this.ScorePercent = scorePercent;
-            SkillLastS = 5.0f;
-            this.SkillLastL = SkillLastL;
-            this.ImgPath = ("https://i.imgur.com/" + ImgPath);
+        
+        public Card() {
+            SkillLastMin = 5.0f;
         }
 
         public string GetBand() {
