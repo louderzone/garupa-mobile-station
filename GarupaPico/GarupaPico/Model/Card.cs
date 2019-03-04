@@ -66,7 +66,7 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets card skill description.
         /// </summary>
-        public string SkillType { get; private set; }
+        public SkillType? SkillType { get; private set; }
 
         /// <summary>
         /// Gets percentage of score up by card skill.
@@ -96,9 +96,9 @@ namespace GarupaPico.Model
             SkillLastMin = 5.0f;
         }
 
-        public string GetBand() {
-            if (Band.Equals("Poppin'Party", StringComparison.OrdinalIgnoreCase))
-                return "Poppin' Party";
+        public BandName? GetBand() {
+            if (Band == BandName.PoppinParty)
+                return BandName.PoppinParty;
             return Band;
         }
     }
