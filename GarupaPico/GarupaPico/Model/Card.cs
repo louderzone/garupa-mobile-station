@@ -8,7 +8,7 @@ namespace GarupaPico.Model
         public int Id { get; private set; }             // card id from the game.
         public string CardName { get; private set; }    // card title.
         public string Band { get; private set; }        // card character band.
-        public string CharaName { get; private set; }   // card character name.
+        public MemberName CharacterName { get; private set; }   // card character name.
         public int Rarity { get; private set; }         // 1-4 star.
         public string Type { get; private set; }        // powerful / pure / cool / happy
         public int Pow { get; private set; }            // power
@@ -26,7 +26,7 @@ namespace GarupaPico.Model
             Id = -1;
             CardName = "<なし>";
             Band = "N/A";
-            CharaName = "N/A";
+            CharacterName = "N/A";
             Rarity = 0;
             Type = "N/A";
             Pow = 0;
@@ -40,12 +40,12 @@ namespace GarupaPico.Model
         }
 
         // full data contrustor
-        public Card(int Id, string CardName, string Band, string CharaName, 
+        public Card(int Id, string CardName, string Band, string characterName, 
             int Rarity, string Type, int Pow, int Tech, int Vis, string SkillType, int ScorePerc, float SkillLastL, string ImgPath) {
             this.Id = Id;
             this.CardName = CardName;
             this.Band = Band;
-            this.CharaName = CharaName;
+            this.CharacterName = characterName;
             this.Rarity = Rarity;
             this.Type = Type;
             this.Pow = Pow;
