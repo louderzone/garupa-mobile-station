@@ -38,7 +38,7 @@ namespace GarupaPico.Model
         /// Gets card type as powerful / pure / cool / happy.
         /// "N/A" for dummy card, which is set when you create dummy object.
         /// </summary>
-        public string Type { get; private set; }
+        public CardType? Type { get; private set; }
 
         /// <summary>
         /// Gets power value of the card.
