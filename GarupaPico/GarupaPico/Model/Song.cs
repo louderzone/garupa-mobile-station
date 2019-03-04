@@ -9,7 +9,7 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets song ID from the game.
         /// </summary>
-        public int SongID { get; private set; }
+        public int ID { get; private set; }
 
         /// <summary>
         /// Gets the song name.
@@ -88,7 +88,7 @@ namespace GarupaPico.Model
         /// Creates dummy song object.
         /// </summary>
         public Song() {
-            SongID = -1;
+            ID = -1;
             SongName = "<なし>";
             Original = false;
             Band = "N/A";
@@ -118,7 +118,7 @@ namespace GarupaPico.Model
         /// <param name="FeverStart"></param>
         /// <param name="FeverEnd"></param>
         /// <param name="InvertBeat"></param>
-        public Song(int SongID, string SongName, string Band, bool Original, int SongLevel, int SongNotes, int[][] Keys, int FeverStart, int FeverEnd, int[] InvertBeat) {
+        public Song(int ID, string SongName, string Band, bool Original, int SongLevel, int SongNotes, int[][] Keys, int FeverStart, int FeverEnd, int[] InvertBeat) {
             if (Keys.Length != NumOfKeys || InvertBeat.Length != NumOfKeys) {
                 throw new ArgumentOutOfRangeException("Failed to create object. Illegal number of arguments for class song.");
             }
@@ -126,7 +126,7 @@ namespace GarupaPico.Model
                 if (Keys[i].Length != 4)
                     throw new ArgumentOutOfRangeException("Failed to create object. Illegal number of arguments for class song.");
             }
-            this.SongID = SongID;
+            this.ID = ID;
             this.SongName = SongName;
             this.Band = Band;
             this.Original = Original;
