@@ -5,21 +5,71 @@ using System.Text;
 namespace GarupaPico.Model
 {
     class Card {
-        public int Id { get; private set; }             // card id from the game.
-        public string CardName { get; private set; }    // card title.
-        public string Band { get; private set; }        // card character band.
-        public string CharaName { get; private set; }   // card character name.
-        public int Rarity { get; private set; }         // 1-4 star.
-        public string Type { get; private set; }        // powerful / pure / cool / happy
-        public int Pow { get; private set; }            // power
-        public int Tech { get; private set; }           // techique
-        public int Vis { get; private set; }            // visual
-        public int Total => Pow + Tech + Vis;           // above 3 sum up.
-        public string SkillType { get; private set; }   // card skill description.
-        public int ScorePerc { get; private set; }      // percentage of score up
-        public float SkillLastS { get; private set; }   // skill last at minimum skill level.
-        public float SkillLastL { get; private set; }   // skill last at maximum skill level.
-        public string ImgPath { get; private set; }     // online image path
+        /// <summary>
+        /// Gets card id from the game.
+        /// </summary>
+        public int Id { get; private set; }
+        /// <summary>
+        /// Gets card title.
+        /// </summary>
+        public string CardName { get; private set; }
+        /// <summary>
+        /// Gets card character band.
+        /// </summary>
+        public string Band { get; private set; }
+        /// <summary>
+        /// Gets card character name.
+        /// </summary>
+        public string CharaName { get; private set; }
+        /// <summary>
+        /// Gets 1-4 star. 
+        /// 0 for dummy card, which is set when you create dummy object.
+        /// </summary>
+        public int Rarity { get; private set; }
+        /// <summary>
+        /// Gets card type as powerful / pure / cool / happy.
+        /// "N/A" for dummy card, which is set when you create dummy object.
+        /// </summary>
+        public string Type { get; private set; }
+        /// <summary>
+        /// Gets power value of the card.
+        /// 0 for dummy card, which is set when you create dummy object.
+        /// </summary>
+        public int Pow { get; private set; }
+        /// <summary>
+        /// Gets technique value of the card.
+        /// 0 for dummy card, which is set when you create dummy object.
+        /// </summary>
+        public int Tech { get; private set; }
+        /// <summary>
+        /// Gets visual value of the card.
+        /// 0 for dummy card, which is set when you create dummy object. 
+        /// </summary>
+        public int Vis { get; private set; }
+        /// <summary>
+        /// Gets the sum up value of power + technique + visual, calculated automatically. 
+        /// </summary>
+        public int Total => Pow + Tech + Vis;
+        /// <summary>
+        /// Gets card skill description.
+        /// </summary>
+        public string SkillType { get; private set; }
+        /// <summary>
+        /// Gets percentage of score up by card skill.
+        /// </summary>
+        public int ScorePerc { get; private set; }
+        /// <summary>
+        /// Gets skill last at minimum skill level.
+        /// </summary>
+        public float SkillLastS { get; private set; }
+        /// <summary>
+        /// Gets skill last at maximum skill level.
+        /// </summary>
+        public float SkillLastL { get; private set; }
+        /// <summary>
+        /// Gets online image path.
+        /// </summary>
+        public string ImgPath { get; private set; }
 
         // default dummy constructor
         public Card() {
