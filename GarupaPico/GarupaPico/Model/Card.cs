@@ -21,12 +21,12 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets card character band.
         /// </summary>
-        public string Band { get; private set; }
+        public BandName? Band { get; private set; }
 
         /// <summary>
         /// Gets card character name.
         /// </summary>
-        public MemberName CharacterName { get; private set; }
+        public MemberName? CharacterName { get; private set; }
 
         /// <summary>
         /// Gets 1-4 star. 
