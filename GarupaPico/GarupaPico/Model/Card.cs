@@ -16,7 +16,7 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets card title.
         /// </summary>
-        public string CardName { get; private set; } = "<なし>";
+        public string Name { get; private set; } = "<なし>";
 
         /// <summary>
         /// Gets card character band.
@@ -26,7 +26,7 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets card character name.
         /// </summary>
-        public MemberName? CharacterName { get; private set; }
+        public MemberName? Character { get; private set; }
 
         /// <summary>
         /// Gets 1-4 star. 
@@ -96,6 +96,10 @@ namespace GarupaPico.Model
             SkillLastMin = 5.0f;
         }
 
+        /// <summary>
+        /// Band name cleanup poppin' party maybe dirty
+        /// </summary>
+        /// <returns></returns>
         public BandName? GetBand() {
             if (Band == BandName.PoppinParty)
                 return BandName.PoppinParty;
