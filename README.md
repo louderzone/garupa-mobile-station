@@ -4,8 +4,8 @@
 
 ## 功能
 
-- [ ] 活動組隊計算工具
-- [ ] 實時Top活動資訊與實踐法運算工具
+- [ ] [活動組隊計算工具](https://github.com/KokomiShiina/garupa-mobile-station/projects/1)
+- [ ] [實時Top活動資訊與實踐法運算工具](https://github.com/KokomiShiina/garupa-mobile-station/projects/2)
 
 ## 支援平台
 
