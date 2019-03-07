@@ -14,18 +14,17 @@
                 <Setter Property="WidthRequest" Value="46" />
                 <Setter Property="BorderRadius" Value="23" />
                 <Setter Property="Margin" Value="0" />
-                <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" />
+                <!-- <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" /> -->
             </Style>
         </ResourceDictionary>
     </TemplatedView.Resources>
     <TemplatedView.ControlTemplate>
         <ControlTemplate>
-            <Grid BackgroundColor="{StaticResource Key=HeaderBackgroundsColor}">
+            <Grid BackgroundColor="{StaticResource DefaultHeaderColor}">
                 <Grid HeightRequest="56">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
@@ -36,37 +35,20 @@
                             Style="{StaticResource Key=AppBarButtonStyle}"
                             HorizontalOptions="Start" />
 
-                        <Grid Grid.Column="1" 
-                          VerticalOptions="Center"
-                          HorizontalOptions="Start" 
-                          ColumnSpacing="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-
-                        <Label Text="{TemplateBinding Path=Title}" 
-                            Grid.Column="1" 
-                            VerticalOptions="Center" 
-                            TextColor="{StaticResource Key=LightTextColor}"
-                            FontSize="20"/>
-                    </Grid>
-
-                    <Button Text="{TemplateBinding Path=MiddleButtonText}"
-                            Command="{TemplateBinding Path=MiddleButtonCommand}"
-                            IsVisible="{TemplateBinding Path=IsMiddleButtonVisible}"
-                            IsEnabled="{TemplateBinding Path=IsMiddleButtonEnabled}"
-                            Style="{StaticResource Key=AppBarButtonStyle}"
-                            HorizontalOptions="End"
-                            Grid.Column="2" />
+                    <Label Text="{TemplateBinding Path=Title}" 
+                           Grid.Column="1"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource DefaultTitleTextColor}"
+                           FontSize="20" />
 
                     <Button Text="{TemplateBinding Path=RightButtonText}"
                             Command="{TemplateBinding Path=RightButtonCommand}"
                             IsVisible="{TemplateBinding Path=IsRightButtonVisible}"
                             IsEnabled="{TemplateBinding Path=IsRightButtonEnabled}"
-                            Style="{StaticResource Key=AppBarButtonStyle}"
+                            Style="{StaticResource AppBarButtonStyle}"
                             HorizontalOptions="End"
-                            Grid.Column="3"
+                            Grid.Column="2"
                             Margin="0, 0, 10, 0" />
                 </Grid>
             </Grid>

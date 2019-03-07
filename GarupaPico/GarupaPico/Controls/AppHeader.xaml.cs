@@ -28,18 +28,6 @@ namespace GarupaPico.Controls
         public static readonly BindableProperty IsLeftButtonEnabledProperty =
             BindableProperty.Create(nameof(IsLeftButtonEnabled), typeof(bool), typeof(AppHeader), true);
 
-        public static readonly BindableProperty MiddleButtonTextProperty =
-            BindableProperty.Create(nameof(MiddleButtonText), typeof(string), typeof(AppHeader), string.Empty);
-
-        public static readonly BindableProperty MiddleButtonCommandProperty =
-            BindableProperty.Create(nameof(MiddleButtonCommand), typeof(ICommand), typeof(AppHeader));
-
-        public static readonly BindableProperty IsMiddleButtonVisibleProperty =
-            BindableProperty.Create(nameof(IsMiddleButtonVisible), typeof(bool), typeof(AppHeader), true);
-
-        public static readonly BindableProperty IsMiddleButtonEnabledProperty =
-            BindableProperty.Create(nameof(IsMiddleButtonEnabled), typeof(bool), typeof(AppHeader), true);
-
         public static readonly BindableProperty RightButtonTextProperty =
             BindableProperty.Create(nameof(RightButtonText), typeof(string), typeof(AppHeader), string.Empty);
 
@@ -97,30 +85,6 @@ namespace GarupaPico.Controls
         {
             get => (bool)GetValue(IsLeftButtonEnabledProperty);
             set => SetValue(IsLeftButtonEnabledProperty, value);
-        }
-
-        public string MiddleButtonText
-        {
-            get => (string)GetValue(MiddleButtonTextProperty);
-            set => SetValue(MiddleButtonTextProperty, value);
-        }
-
-        public ICommand MiddleButtonCommand
-        {
-            get => (ICommand)GetValue(MiddleButtonCommandProperty);
-            set => SetValue(MiddleButtonCommandProperty, value);
-        }
-
-        public bool IsMiddleButtonVisible
-        {
-            get => (bool)GetValue(IsMiddleButtonVisibleProperty);
-            set => SetValue(IsMiddleButtonVisibleProperty, value);
-        }
-
-        public bool IsMiddleButtonEnabled
-        {
-            get => (bool)GetValue(IsMiddleButtonEnabledProperty);
-            set => SetValue(IsMiddleButtonEnabledProperty, value);
         }
 
         public string RightButtonText
