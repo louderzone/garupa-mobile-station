@@ -4,9 +4,9 @@ using System.Text;
 
 namespace GarupaPico.Model
 {
-    class Card
+    public class Card
     {
-        private string _imgPath;
+        private string _smallImagePath;
 
         /// <summary>
         /// Gets card id from the game.
@@ -84,12 +84,12 @@ namespace GarupaPico.Model
         public float SkillLastMax { get; private set; }
 
         /// <summary>
-        /// Gets online image path.
+        /// Gets the card's small image path.
         /// </summary>
-        public string ImgPath
+        public string SmallImagePath
         {
-            get => _imgPath;
-            private set => _imgPath = "https://i.imgur.com/" + value;
+            get => "https://i.imgur.com/" + _smallImagePath;
+            private set => _smallImagePath = value;
         }
         
         public Card() {
