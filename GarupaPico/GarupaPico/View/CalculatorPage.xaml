@@ -2,14 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:GarupaPico.Controls;assembly=GarupaPico"
+             xmlns:viewModel="clr-namespace:GarupaPico.ViewModel.Calculator;assembly=GarupaPico"
              x:Class="GarupaPico.View.CalculatorPage">
+    <ContentPage.BindingContext>
+        <viewModel:CalculatorViewModel />
+    </ContentPage.BindingContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <controls:AppHeader Title="Deck"
+        <controls:AppHeader Title="{Binding Title}"
                             TitleHorizontalOptions="Center"
                             IsLeftButtonEnabled="False"
                             IsLeftButtonVisible="False"
