@@ -156,6 +156,7 @@ namespace GarupaPico.Garupa
         private const int _maxMember = 5;
         private const int _areaItems = 14;
         private int[ , ] _items = new int[_areaItems, 2]; // 0= PPP, 1=AG, 2=P*P, 3=Roselia, 4=HHW || Level 5-0
+        // For each member, calculate must separate.
         private double[] _member = new double[_maxMember] { 0.0, 0.0, 0.0, 0.0, 0.0 };
         private double[] _memberChallenge = new double[_maxMember] { 0.0, 0.0, 0.0, 0.0, 0.0 };
         private double[] _challengeBuff = new double[_maxMember] { 0.0, 0.0, 0.0, 0.0, 0.0 };
@@ -169,6 +170,11 @@ namespace GarupaPico.Garupa
                 for (j = 0; j < _items.GetLength(1); j++)
                     _items[i, j] = -1;
             }
+            for(int i = 0; i < _maxMember; i ++) {
+                _member[i] = 0.0;
+                _memberChallenge[i] = 0.0;
+                _challengeBuff[i] = 0.0;
+            }
         }
 
         /// <summary>
@@ -178,8 +184,12 @@ namespace GarupaPico.Garupa
 
         }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public DeckCalAPI() {
-
+            BuildCardList();
+            Initialize();
         }
 
         /// <summary>
