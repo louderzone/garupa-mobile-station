@@ -11,17 +11,17 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets card id from the game.
         /// </summary>
-        public int Id { get; private set; } = -1;
+        public int Id { get; } = -1;
 
         /// <summary>
         /// Gets card title.
         /// </summary>
-        public string Name { get; private set; } = "<なし>";
+        public string Name { get; set; } = "<なし>";
 
         /// <summary>
         /// Gets card character band.
         /// </summary>
-        public BandName? Band { get; private set; }
+        public BandName? Band { get; }
 
         /// <summary>
         /// Gets card character name.
@@ -89,7 +89,7 @@ namespace GarupaPico.Model
         public string SmallImagePath
         {
             get => "https://i.imgur.com/" + _smallImagePath;
-            private set => _smallImagePath = value;
+            set => _smallImagePath = value;
         }
         
         public Card() {

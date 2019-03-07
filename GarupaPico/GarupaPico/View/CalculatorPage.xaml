@@ -12,12 +12,39 @@
             <RowDefinition Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-
         <controls:AppHeader Title="{Binding Title}"
                             TitleHorizontalOptions="Center"
                             IsLeftButtonEnabled="False"
                             IsLeftButtonVisible="False"
                             IsRightButtonEnabled="False"
                             IsRightButtonVisible="False" />
+
+        <!--#region Content-->
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--#region Card options-->
+
+            <ListView ItemsSource="{Binding SelectedDeck}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Height="50"
+                                   Text="{Binding Name}"
+                                   ImageSource="{Binding SmallImagePath}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="1" Text="Add Yukina" Clicked="AddYukina_OnClicked" />
+
+            <!--#endregion-->
+
+        </Grid>
+
+        <!--#endregion-->
     </Grid>
 </ContentPage>
