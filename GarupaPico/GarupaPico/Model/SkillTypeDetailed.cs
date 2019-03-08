@@ -23,7 +23,7 @@ namespace GarupaPico.Model
         [EnumMember(Value = "判定強化(大)＆スコア20%ＵＰ")]
         JudgeBigAndScoreUp20 = 6,
         [EnumMember(Value = "判定強化(特大)＆スコア40%ＵＰ")]
-        JudgeExBigAndScoreUp40 = 7,
+        JudgeExtraBigAndScoreUp40 = 7,
         [EnumMember(Value = "ライフ300回復＆スコア10%ＵＰ")]
         LifeRecover300AndScoreUp10 = 8,
         [EnumMember(Value = "ライフ450回復＆スコア20%ＵＰ")]
