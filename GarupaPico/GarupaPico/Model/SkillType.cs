@@ -15,7 +15,7 @@ namespace GarupaPico.Model
         [EnumMember(Value = "判定強化")]
         JudgeStrength = 2,
         [EnumMember(Value = "ライフ回復")]
-        HpRecover = 3,
+        LifeRecover = 3,
         [EnumMember(Value = "判定＆スコア")]
         JudgeAndScore = 4,
         [EnumMember(Value = "回復＆スコア")]
