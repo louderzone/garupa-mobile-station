@@ -19,7 +19,7 @@ namespace GarupaPico.Model
         [EnumMember(Value = "スコア100%ＵＰ")]
         ScoreUp_100 = 4,
         [EnumMember(Value = "判定強化(中)＆スコア10%ＵＰ")]
-        Judge_Mid_ScoreUp_10 = 5;,
+        Judge_Mid_ScoreUp_10 = 5,
         [EnumMember(Value = "判定強化(大)＆スコア20%ＵＰ")]
         Judge_Big_ScoreUp_20 = 6,
         [EnumMember(Value = "判定強化(特大)＆スコア40%ＵＰ")]
