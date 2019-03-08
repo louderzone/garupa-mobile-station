@@ -56,22 +56,22 @@ namespace GarupaPico.Model
         /// <summary>
         /// Gets which note triggers skill start, in array (0-5).
         /// </summary>
-        public int[] Key_start { get; private set; } = new int[NumOfKeys];
+        public int[] KeyStart { get; private set; } = new int[NumOfKeys];
 
         /// <summary>
         /// Gets which note as the skill ends if lasts 7.0 seconds, in array (0-5).
         /// </summary>
-        public int[] Key_7_0 { get; private set; } = new int[NumOfKeys];
+        public int[] Key70 { get; private set; } = new int[NumOfKeys];
 
         /// <summary>
         /// Gets which note as the skill ends if lasts 7.5 seconds, in array (0-5).
         /// </summary>
-        public int[] Key_7_5 { get; private set; } = new int[NumOfKeys];
+        public int[] Key75 { get; private set; } = new int[NumOfKeys];
 
         /// <summary>
         /// Gets which note as the skill ends if lasts 8.0 seconds, in array (0-5).
         /// </summary>
-        public int[] Key_8_0 { get; private set; } = new int[NumOfKeys];
+        public int[] Key80 { get; private set; } = new int[NumOfKeys];
 
         #endregion
 
@@ -98,10 +98,10 @@ namespace GarupaPico.Model
         public Song(IReadOnlyList<int[]> keys, IReadOnlyList<int> invertBeat) {
             for (var i = 0; i < NumOfKeys; i++)
             {
-                Key_start[i] = keys[i][0];
-                Key_7_0[i] = keys[i][1];
-                Key_7_5[i] = keys[i][2];
-                Key_8_0[i] = keys[i][3];
+                KeyStart[i] = keys[i][0];
+                Key70[i] = keys[i][1];
+                Key75[i] = keys[i][2];
+                Key80[i] = keys[i][3];
                 InvertBeat[i] = invertBeat[i];
             }
         }

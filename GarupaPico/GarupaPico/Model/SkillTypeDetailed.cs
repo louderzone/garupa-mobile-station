@@ -35,7 +35,7 @@ namespace GarupaPico.Model
         [EnumMember(Value = "判定強化(大)＆スコア60%ＵＰ")]
         JudgeBigAndScoreUp60 = 12,
         [EnumMember(Value = "ライフ300回復＆スコア30%ＵＰ")]
-        LifeRecover300_ScoreUp30 = 13,
+        LifeRecover300ScoreUp30 = 13,
         [EnumMember(Value = "ライフ450回復＆スコア60%ＵＰ")]
         LifeRecover450AndScoreUp60 = 14,
         [EnumMember(Value = "ライフ300回復＆判定強化(中)	")]
@@ -54,7 +54,7 @@ namespace GarupaPico.Model
         [EnumMember(Value = "ライフ600以上でスコア80%UP | ライフ600未満の場合ライフ500回復")]
         ScoreUp80orLifeRecover500 = 22,
         [EnumMember(Value = "ライフ減少無効＆スコア10％UP")]
-        BadGuard_ScoreUp10 = 23,
+        BadGuardAndScoreUp10 = 23,
         [EnumMember(Value = "GREAT以下を出すまでスコアが65％UP")]
         // 24 not exist, perhaps future extension.
         NoGreatScoreUp65 = 25,
