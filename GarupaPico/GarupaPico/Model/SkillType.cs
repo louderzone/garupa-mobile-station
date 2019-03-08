@@ -11,18 +11,26 @@ namespace GarupaPico.Model
     public enum SkillType
     {
         [EnumMember(Value = "スコアUP")]
-        ScoreUp,
-        [EnumMember(Value = "(L)スコアUP")]
-        LargeScoreUp,
-        [EnumMember(Value = "(P)スコアUP")]
-        PerfectScoreUp,
-        [EnumMember(Value = "ライフ回復")]
-        HpRecover,
+        ScoreUp = 1,
         [EnumMember(Value = "判定強化")]
-        JudgeStrength,
+        JudgeStrength = 2,
+        [EnumMember(Value = "ライフ回復")]
+        HpRecover = 3,
         [EnumMember(Value = "判定＆スコア")]
-        JudgeAndScore,
+        JudgeAndScore = 4,
+        [EnumMember(Value = "回復＆スコア")]
+        RecoverAndScore = 5, 
+        [EnumMember(Value = "回復＆判定")]
+        RecoverAndJudge = 6,
+        [EnumMember(Value = "(L)スコアUP")]
+        LifeScoreUp = 7,
+        [EnumMember(Value = "(P)スコアUP")]
+        PerfectScoreUp = 8,
+        [EnumMember(Value = "(L)ライフ回復")]
+        LifeScoreUpOrRecover = 9,
         [EnumMember(Value = "ダメガード")]
-        BadGuard
+        BadGuard = 10,
+        [EnumMember(Value = "(G)スコアUP")]
+        NoGreatScoreUp = 11,
     }
 }
