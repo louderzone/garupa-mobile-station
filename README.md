@@ -1,25 +1,30 @@
-# ガルパ掌上助手
+# Garupa Intelli Band
 
-跨平台的「BanG Dream 少女樂團派對」手機遊戲輔助工具
+[Join us on Discord](https://discord.gg/6BKmmk6)
 
-## 功能
+This is a cross platform project for assisting game play of: `BanG Dream! Girls Band Party`
 
-- [ ] [活動組隊計算工具](https://github.com/KokomiShiina/garupa-mobile-station/projects/1)
-- [ ] [實時Top活動資訊與實踐法運算工具](https://github.com/KokomiShiina/garupa-mobile-station/projects/2)
+## Ohter Languages
 
-## 支援平台
+- [Chinese Traditional](README.zh.md)
 
-```markdown
-Android: 5.0+
-iOS: 8.0+
-UWP: Windows 10 (Build 16299)+
-```
+## For new comers
 
-## 授權條款
+The project welcomes variaty of developers participating in the development. Including but not limited to players with no or brief programming skills.
 
-「ガルパ掌上助手」為採用「[GNU通用公眾授權條款](LICENSE)」的開源軟件，任何用家皆可在條款允許範圍內進行二次開發。
+Whether you are a programmer, designer or player you can definitely contribute to the projcet. If you have not yet feel your protential,
 
-## 初次設置
+Here is [a list of things you may be able to help with](README/en/BEGINNER.md)
+
+This is NOT only a software development project. We aim to gather all BanG Dream! lovers and ensure every player enjoys Bandori.
+
+You can also [Join us on Discord](https://discord.gg/6BKmmk6)
+
+## License
+
+The product is released under [GNU General Public License v3.0](LICENSE)
+
+## Initial setup
 
 Eric Lam - [KokomiShiina](https://github.com/KokomiShiina/)  
-Nick Pang - [NikuPAN](https://github.com/NikuPAN)
+Nick Pang - [NikuPAN](https://github.com/NikuPAN)  
