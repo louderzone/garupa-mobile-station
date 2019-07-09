@@ -1,5 +1,7 @@
 # Garupa Intelli Band
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ed87fa4d78eb4cd691bbbf7dcfe8a58a)](https://app.codacy.com/app/louderzone/garupa-mobile-station?utm_source=github.com&utm_medium=referral&utm_content=louderzone/garupa-mobile-station&utm_campaign=Badge_Grade_Dashboard)
+
 [Join us on Discord](https://discord.gg/6BKmmk6)
 
 This is a cross platform project for assisting game play of: `BanG Dream! Girls Band Party`
