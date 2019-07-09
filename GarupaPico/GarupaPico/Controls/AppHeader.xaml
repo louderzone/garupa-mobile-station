@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TemplatedView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GarupaPico.Controls.AppHeader">
+    <TemplatedView.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="AppBarButtonStyle">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="TextColor" Value="{StaticResource DefaultTitleTextColor}" />
+                <Setter Property="HeightRequest" Value="46" />
+                <Setter Property="WidthRequest" Value="46" />
+                <Setter Property="BorderRadius" Value="23" />
+                <Setter Property="Margin" Value="0" />
+                <!-- <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" /> -->
+            </Style>
+        </ResourceDictionary>
+    </TemplatedView.Resources>
+    <TemplatedView.ControlTemplate>
+        <ControlTemplate>
+            <Grid BackgroundColor="{StaticResource DefaultHeaderColor}">
+                <Grid HeightRequest="56">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="{TemplateBinding Path=LeftButtonText}"
+                            Command="{TemplateBinding Path=LeftButtonCommand}"
+                            IsVisible="{TemplateBinding Path=IsLeftButtonVisible}"
+                            IsEnabled="{TemplateBinding Path=IsLeftButtonEnabled}"
+                            Style="{StaticResource Key=AppBarButtonStyle}"
+                            HorizontalOptions="Start" />
+
+                    <Label Text="{TemplateBinding Path=Title}" 
+                           Grid.Column="1"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="Center"
+                           TextColor="{StaticResource DefaultTitleTextColor}"
+                           FontSize="20" />
+
+                    <Button Text="{TemplateBinding Path=RightButtonText}"
+                            Command="{TemplateBinding Path=RightButtonCommand}"
+                            IsVisible="{TemplateBinding Path=IsRightButtonVisible}"
+                            IsEnabled="{TemplateBinding Path=IsRightButtonEnabled}"
+                            Style="{StaticResource AppBarButtonStyle}"
+                            HorizontalOptions="End"
+                            Grid.Column="2"
+                            Margin="0, 0, 10, 0" />
+                </Grid>
+            </Grid>
+        </ControlTemplate>
+    </TemplatedView.ControlTemplate>
+</TemplatedView>

@@ -1,7 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:GarupaPico.Controls;assembly=GarupaPico"
+             xmlns:viewModel="clr-namespace:GarupaPico.ViewModel.Calculator;assembly=GarupaPico"
              x:Class="GarupaPico.View.CalculatorPage">
-  <!--Pages can be added as references or inline-->
-    <!--ContentPage Title="Tab 1"  /-->
+    <ContentPage.BindingContext>
+        <viewModel:CalculatorViewModel />
+    </ContentPage.BindingContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <controls:AppHeader Title="{Binding Title}"
+                            TitleHorizontalOptions="Center"
+                            IsLeftButtonEnabled="False"
+                            IsLeftButtonVisible="False"
+                            IsRightButtonEnabled="False"
+                            IsRightButtonVisible="False" />
+
+        <!--#region Content-->
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <!--#region Card options-->
+
+            <ListView ItemsSource="{Binding SelectedDeck}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Height="50"
+                                   Text="{Binding Name}"
+                                   ImageSource="{Binding SmallImagePath}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Grid.Row="1" Text="Add Yukina" Clicked="AddYukina_OnClicked" />
+
+            <!--#endregion-->
+
+        </Grid>
+
+        <!--#endregion-->
+    </Grid>
 </ContentPage>
